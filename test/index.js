@@ -1,5 +1,6 @@
 const test = require('tape')
 const models = require('@tradle/models')
+const validate = require('@tradle/validate').models
 const builders = require('../')
 
 test('basic', function (t) {
@@ -20,6 +21,13 @@ test('basic', function (t) {
     })
     .toJSON()
 
-    console.log(JSON.stringify(model, null, 2))
-    t.end()
+  t.doesNotThrow(function () {
+    validate.model(model)
+  })
+
+  t.doesNotThrow(function () {
+    validate(models.concat(model))
+  })
+
+  t.end()
 })
