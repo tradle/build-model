@@ -1,0 +1,26 @@
+{
+  "name": "@tradle/build-model",
+  "version": "1.0.0",
+  "description": "tradle model builder",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tradle/build-model"
+  },
+  "author": "mvayngrib",
+  "license": "MIT",
+  "dependencies": {
+    "@tradle/validate": "https://github.com/tradle/validate",
+    "clone": "^2.1.0",
+    "xtend": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tradle/models": "https://github.com/tradle/models",
+    "eslint": "^3.15.0",
+    "tape": "^4.6.3"
+  },
+  "scripts": {
+    "test": "node test",
+    "lint": "eslint --quiet ."
+  }
+}
